@@ -9,7 +9,7 @@ RUN  apt-get update  \
   && apt-get upgrade -y \
   && apt-get install -yq ssh nodejs sudo cron git sendmail fetchmail ca-certificates nodejs-legacy npm python-pygments \
        build-essential g++ nginx \
-       php5 php5-fpm php5-mcrypt php5-intl php5-mysql php5-gd php5-dev php5-curl php-apc php5-cli php5-json php5-ldap php5-imap php-pear --no-install-recommends \
+       php5 php5-common php5-fpm php5-mcrypt php5-intl php5-mysql php5-gd php5-dev php5-apcu php5-curl php-apc php5-cli php5-json php5-ldap php5-imap php-pear --no-install-recommends \
   && rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/*
 
 # Composer
