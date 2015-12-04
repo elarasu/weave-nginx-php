@@ -20,13 +20,13 @@ RUN mv composer.phar /usr/local/bin/composer
 RUN ln -sf /dev/stdout /var/log/nginx/access.log
 RUN ln -sf /dev/stderr /var/log/nginx/error.log
 
-
 # Expose Nginx on port 80 and 443
 EXPOSE 80
 EXPOSE 443
 
 # Add service config files
 ADD conf/fastcgi.conf /etc/nginx/
+ADD conf/nginx.conf /etc/nginx/
 ADD conf/php.ini /etc/php5/fpm/
 ADD conf/php-fpm.conf /etc/php5/fpm/
 
